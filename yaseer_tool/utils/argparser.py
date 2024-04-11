@@ -1,17 +1,17 @@
 import argparse
 import os
 
-from functions.check import check
-from functions.consts import COLOR, DATE, OPTIONS, TOOL_INFORMATION
-from functions.dos import dos
-from functions.ftp_login import ftp_login
-from functions.md5 import md5
-from functions.my_base64 import base64_
-from functions.my_nmap import my_nmap
-from functions.powershell import powershell
-from functions.ssh_login import ssh_login
-from functions.web_path import web_path
 from pywifi import PyWiFi
+from tools.check import check
+from tools.dos import dos
+from tools.ftp_login import ftp_login
+from tools.md5 import md5
+from tools.my_base64 import base64_
+from tools.my_nmap import my_nmap
+from tools.powershell import powershell
+from tools.ssh_login import ssh_login
+from tools.web_path import web_path
+from utils.consts import COLOR, DATE, OPTIONS, TOOL_INFORMATION
 
 
 def argparser():

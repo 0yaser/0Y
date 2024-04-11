@@ -1,7 +1,7 @@
 import os
 
 import paramiko
-from .consts import TOOL_INFORMATION, login_data, prompt
+from ..utils.consts import TOOL_INFORMATION, login_data, prompt
 
 
 def ssh_login(hostname, port, username, password, status):

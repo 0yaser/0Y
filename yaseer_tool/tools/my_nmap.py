@@ -1,7 +1,7 @@
 import os
 
 import nmapping
-from .consts import TOOL_INFORMATION, TOP_PORTS, close, tcp
+from ..utils.consts import TOOL_INFORMATION, TOP_PORTS, close, tcp
 
 
 def my_nmap(host=None, port=None):
@@ -36,5 +36,3 @@ def my_nmap(host=None, port=None):
             print(tcp(porT, name, product, version, extrainfo))
         else:
             print(close(porT))
-
-

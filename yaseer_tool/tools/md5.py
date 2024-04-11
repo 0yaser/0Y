@@ -1,7 +1,7 @@
 import hashlib
 import os
 
-from .consts import COLOR, DATE, TOOL_INFORMATION
+from ..utils.consts import COLOR, DATE, TOOL_INFORMATION
 
 
 def md5(md5_hasH, file):

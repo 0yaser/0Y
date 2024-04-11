@@ -1,7 +1,7 @@
 import os
 from ftplib import FTP
 
-from .consts import TOOL_INFORMATION, login_data, prompt
+from ..utils.consts import TOOL_INFORMATION, login_data, prompt
 
 
 def ftp_login(ftp_server, port, username, password, status):
