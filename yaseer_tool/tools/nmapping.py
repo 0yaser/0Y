@@ -59,7 +59,6 @@ import sys
 from multiprocessing import Process
 from xml.etree import ElementTree as ET
 
-
 __author__ = "Alexandre Norman (norman@xael.org)"
 __version__ = "0.7.1"
 __last_modification__ = "2021.10.26"
