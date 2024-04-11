@@ -19,3 +19,6 @@ requests = "^2.31.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "yaseer_tool.yaseer_tool:web_path"

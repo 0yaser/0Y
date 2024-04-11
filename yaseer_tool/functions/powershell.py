@@ -1,6 +1,6 @@
 import os
 
-from .. import COLOR, DATE, TOOL_INFORMATION
+from consts import TOOL_INFORMATION, thePath
 
 
 def powershell(lhost, port, name):
@@ -23,6 +23,6 @@ def powershell(lhost, port, name):
         os.system("clear")
 
     elif os.name == "nt":
-        os.system("cls")
+        os.system("cls")  #! unreachable
     print(TOOL_INFORMATION)
-    print(f"{COLOR.WHITE}[{COLOR.BLUE}{DATE}{COLOR.WHITE}]{COLOR.GREEN} {path}")
+    print(thePath(path))

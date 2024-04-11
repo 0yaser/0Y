@@ -1,9 +1,9 @@
 import os
 
-from .. import COLOR, DATE, SESSION, TOOL_INFORMATION
+from consts import COLOR, DATE, SESSION, TOOL_INFORMATION
 
 
-def web_paths(host, path):
+def web_path(host, path):
     paths = open(path, "r").read().splitlines()
     true_path = []
     for dir in paths:

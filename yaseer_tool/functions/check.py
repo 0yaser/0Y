@@ -1,13 +1,8 @@
-import datetime
 import os
 import time
-from ftplib import FTP
 
-import colorama
+from consts import TOOL_INFORMATION, prompt
 from pywifi import Profile, PyWiFi, const
-
-color = colorama.Fore
-date = datetime.datetime.now().time()
 
 
 def check(host, pasfile):
@@ -32,27 +27,11 @@ def check(host, pasfile):
                 os.system("clear")
 
             elif os.name == "nt":
-                os.system("cls")
+                os.system("cls")  #! unreachable
 
-            print(
-                f"""{color.YELLOW}
-                         ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░ 
-                         ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░ 
-{color.BLUE} 0Y Tool{color.YELLOW}                 ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░ 
-                         ░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░ 
-{color.GREEN} By : 0xYaser {color.YELLOW}           ░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░ 
-                         ░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░           
-{color.WHITE} version [0.1] {color.YELLOW}          ░▒▓████████▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░ 
-
-   """
-            )
-            print(
-                f"\n{color.WHITE}[{color.BLUE}{date}{color.WHITE}] >> {color.GREEN}{host}{color.RED}:{color.GREEN}{passwd}{color.WHITE}\n"
-            )
+            print(TOOL_INFORMATION)
+            print(prompt(param=host, password=passwd, prompt=">>"))
             break
         else:
             Error = Error + 1
-            print(
-                f"\r{color.WHITE}[{color.BLUE}{date}{color.WHITE}] [{color.RED}NOT TRUE {Error}{color.WHITE}] >> {host}:{passwd}{color.WHITE}",
-                end="",
-            )
+            print(prompt(param=host, password=passwd, prompt="BAD LOGIN"))
