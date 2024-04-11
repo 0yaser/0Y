@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "0y"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+licensing = "^0.44"
+pip-licenses = "^4.4.0"
+paramiko = "^3.4.0"
+argparse = "^1.4.0"
+colorama = "^0.4.6"
+pywifi = "^1.1.12"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
