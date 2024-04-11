@@ -1,8 +1,9 @@
 import os
 import time
 
-from consts import TOOL_INFORMATION, prompt
 from pywifi import Profile, PyWiFi, const
+
+from .consts import TOOL_INFORMATION, prompt
 
 
 def check(host, pasfile):

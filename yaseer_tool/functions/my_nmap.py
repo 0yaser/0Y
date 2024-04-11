@@ -1,7 +1,7 @@
 import os
 
 import nmapping
-from consts import TOOL_INFORMATION, TOP_PORTS, close, tcp
+from .consts import TOOL_INFORMATION, TOP_PORTS, close, tcp
 
 
 def my_nmap(host=None, port=None):

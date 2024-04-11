@@ -1,6 +1,6 @@
 import os
 
-from consts import TOOL_INFORMATION, thePath
+from .consts import TOOL_INFORMATION, thePath
 
 
 def powershell(lhost, port, name):

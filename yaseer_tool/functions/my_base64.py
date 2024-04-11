@@ -1,7 +1,7 @@
 import base64
 import os
 
-from consts import TOOL_INFORMATION, failed, sucsess
+from .consts import TOOL_INFORMATION, failed, sucsess
 
 
 def base64_(base64_hasH, file):

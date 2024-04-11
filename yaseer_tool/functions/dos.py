@@ -3,7 +3,7 @@ import socket
 import threading
 from time import perf_counter
 
-from consts import COLOR, DATE
+from .consts import COLOR, DATE
 
 
 def dos(host=None, thread=None, port=None):

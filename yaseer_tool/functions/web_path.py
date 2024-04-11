@@ -1,6 +1,6 @@
 import os
 
-from consts import COLOR, DATE, SESSION, TOOL_INFORMATION
+from .consts import COLOR, DATE, SESSION, TOOL_INFORMATION
 
 
 def web_path(host, path):
